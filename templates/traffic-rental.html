@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CLAWCLOUD现存活动一览">
+    <meta name="keywords" content="CLAWCLOUD,CLAW,阿爪,爪云,活动">
+    <meta name="author" content="Kori1c">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>CLAWCLOUD 进行中的活动</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // 监听 reload 事件
+        socket.on('reload', function() {
+            location.reload();  // 刷新页面
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>🎉 CLAWCLOUD 流量出租页 🎉</h1>
+        <p>每月 300GB 流量，超值租用价格
+            价格：8元/月 (约 1 美元/月)
+            价格按月计算，支持剩余价值退款。<br>
+            支持支付宝红包、微信和币安欧意交易所支付！
+            限时折扣，先到先得！点击购买即可联系我！售完即止！！！非活动款可使用8折优惠码：M4N5O6P7Q8
+        </p>
+    </div>
+    <div class="container">
+        <!-- Telegrem官方群组 -->
+        <div class="telegram-group">
+            <h2>📱 加入我们的交流群组</h2>
+            <p>欢迎加入CLAWCLOUD非官方Telegram交流群，1800+用户等您分享使用经验！</p>
+            <a href="https://t.me/ClawCloud_Chat" class="telegram-link" target="_blank">💬 加入Telegram群组</a>
+            <!-- 历史机器归档 -->
+            <a href="/history-archive" class="telegram-link" target="_blank">🕰️ 历史在售机器归档</a>
+            <!-- 流量出租页 -->
+            <!-- <a href="/" class="telegram-link" target="_blank">🕊️ 流量出租页</a> -->
+        </div>
+        
+        <!-- <div class="telegram-group">
+            <h2>📱 加入我们的交流群组</h2>
+            <p>欢迎加入CLAWCLOUD非官方Telegram交流群，9999+用户等您分享使用经验！</p>
+            <a href="https://t.me/ClawCloud_Chat" class="telegram-link" target="_blank">💬 加入Telegram群组</a>
+        </div> -->
+        <div class="product-container">
+            <div class="product-card">
+                <h2 class="product-title">300G每月套餐</h2>                
+                <ul class="specs">
+                    <li>📌 300G 流量（单向计算）</li>
+                    <li>📌 1Gbps 峰值带宽（晚高峰QOS）</li>
+                    <li>📌 IPv4</li>
+                </ul>
+                <div class="locations">📍 地域：香港 | 日本</div>
+                <div class="coupon">低于正价</div>
+                <div class="price-info">
+                    价格：$1/8CNY/月
+                </div>
+                <div class="note">低于官方价格！还是限量福利哦，抓紧手速！</div>
+                <a href="https://t.me/TheodoreTed" class="buy-btn" target="_blank">立即联系（无法打开链接请关闭去广告插件/代理软件）</a>
+            </div>
+            <!-- 流量套餐 -->
+            <div class="product-card">
+                <h2 class="product-title">DIY 流量套餐  </h2>                
+                <ul class="specs">
+                    <li>📌 流量定制（单向计算）（晚高峰QOS）</li>
+                    <li>📌 1Gbps 峰值带宽</li>
+                    <li>📌 IPv4</li>
+                </ul>
+                <div class="locations">📍 地域：香港 | 日本</div>
+                <div class="coupon">性质：DIY</div>
+                <div class="price-info">
+                    定制价格：$1/0.3T/月 | $/0.6T/月 | $3/1T/月 | $4/1.5T/月
+                </div>
+                <div class="note">流量DIY，点击咨询！限量福利哦，抓紧手速！</div>
+                <a href="https://t.me/TheodoreTed" class="buy-btn" target="_blank">立即咨询（无法打开链接请关闭去广告插件/代理软件）</a>
+            </div>
+            <!-- 其他产品卡片... -->
+        </div>
+        <div class="footer">
+            <p>感谢大家的支持与厚爱！</p>
+            <p>— CLAWCLOUD —</p>
+        </div>
+    </div>
+</body>
+</html>

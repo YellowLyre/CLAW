@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+.header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./clawback.png') no-repeat center/cover;
+    color: white;
+    margin-bottom: 60px;
+}
+.header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.telegram-group {
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 60px;
+    background: #f7f7f7;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.telegram-link {
+    display: inline-block;
+    background: #000000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.telegram-link:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+/* 优化：使用 gap 设置子元素间距 */
+.product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* 子元素之间的间距 */
+    margin-bottom: 60px;
+}
+.product-card {
+    background: linear-gradient(135deg, #795b5b, #ffffff);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.product-title {
+    font-size: 1.4em;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.product-title::before {
+    content: '🔥';
+    margin-right: 5px;
+    color: red;
+}
+.specs {
+    margin-bottom: 25px;
+}
+.specs li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 背景灰色化 */
+.product-card-Gray {
+    background: #F0F0F0; /* 浅灰色背景 */
+    border: 1px solid #D3D3D3; /* 灰色边框 */
+    color: #808080; /* 灰色文字（可选，覆盖其他文字颜色） */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: none; /* 去掉阴影，进一步强调不活跃状态 */
+}
+.buy-btn {
+    display: inline-block;
+    background: #000000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    text-align: center;
+}
+.buy-btn:hover {
+    background: #555555;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.footer {
+    text-align: center;
+    padding: 60px 0 20px;
+    color: #666666;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .header {
+        padding: 40px 20px;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+}
+/* 流量出租站专属样式 */
+
+
+
+/* 历史账单专属样式 */
+.buy-btn-disabled {
+    background-color: #A9A9A9; /* 灰色背景 */
+    color: #FFFFFF; /* 白色文字 */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+    cursor: not-allowed; /* 鼠标指针显示为禁止 */
+    pointer-events: none; /* 禁用点击 */
+}
+
+.buy-btn-disabled:hover {
+    background-color: #B0B0B0; /* 浅灰色，悬停时 */
+    color: #FFFFFF;
+}
+/* 容器样式 */
+.product-container-old {
+    /* display: flex; */
+    display: flex;
+    flex: 1 1 50%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 20px;
+}
+
+/* 卡片样式 */
+.product-card-old {
+    flex: 1 1 calc(39.33% - 16px); /* 适应每行 3 个元素 */
+    max-width: calc(39.33% - 16px); /* 防止过宽 */
+    background: linear-gradient(135deg, #f5f5f5, #ffffff);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+
+.product-card-old:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 列表样式 */
+.specs-old li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* 按钮样式 */
+.buy-btn-old {
+    background-color: #A9A9A9; /* 灰色背景 */
+    color: #FFFFFF; /* 白色文字 */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+    cursor: not-allowed;
+    pointer-events: none; /* 禁用点击 */
+}
+
+.buy-btn-old:hover {
+    background-color: #B0B0B0;
+    color: #FFFFFF;
+}
+
+/* 其他文字或信息 */
+.note-old, .coupon-old, .price-info-old, .locations-old {
+    color: #7d7d7d; /* 灰色文字 */
+    margin-top: 10px;
+    font-size: 14px;
+}
